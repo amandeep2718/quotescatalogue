@@ -1,9 +1,12 @@
+
+
 const navSlide = () => {
     const lineone=document.querySelector('.line1');
     const linetwo=document.querySelector('.line2');
     const linethree=document.querySelector('.line3');
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
+    
     burger.addEventListener('click',()=>{
 nav.classList.toggle('nav-active');
 nav.classList.toggle('nav-activee');
@@ -11,7 +14,12 @@ lineone.classList.toggle('linee');
 linetwo.classList.toggle('lineee');
 linethree.classList.toggle('lineeee');
 burger.classList.toggle('rotatee');
-
+if(nav.classList.contains('nav-active')){
+   
+window.addEventListener('scroll',()=>{
+   window.scrollTo(0,0);
+})
+}
     });
    
 }
@@ -44,3 +52,43 @@ var listt=document.getElementById('listt');
         
       }
    });
+
+
+
+
+
+
+
+
+   filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
