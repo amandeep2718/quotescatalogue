@@ -31,29 +31,43 @@ window.addEventListener('scroll',()=>{
    window.addEventListener('scroll',()=>{
 var mynav=document.getElementById('mynav');
 var listt=document.getElementById('listt');
+var svgg=document.getElementById('layer');
     const scrolled=window.scrollY;
     var width = Math.max(window.screen.width, window.innerWidth);
-    if (scrolled>=90 && width<769){
+    if (scrolled>=100 && width<769){
        mynav.classList.add('newnav');
     listt.style.background="rgba(0,0,0,0.8)";
 
-
      
     }
-    if (scrolled<=150 && width<769){
+    if (scrolled<=120 && width<769){
         mynav.classList.remove('newnav');
         listt.style.background="rgba(0,0,0,0.8)";
+        
      }
+
+
+
+
+
      if (scrolled>=90 && width>769){
         mynav.classList.add('newnav');
+        
+svgg.style.fill="red";
+svgg.style.opacity="1";
 
- 
+ svgg.style.width="50%";
  
       
      }
-     if (scrolled<=150 && width>796){
+     if (scrolled<=50 && width>796){
          mynav.classList.remove('newnav');
+         svgg.style.fill="white";
+         svgg.style.opacity="0";
         
+        
+        
+          
       }
    });
 
