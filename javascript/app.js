@@ -14,16 +14,20 @@ lineone.classList.toggle('linee');
 linetwo.classList.toggle('lineee');
 linethree.classList.toggle('lineeee');
 burger.classList.toggle('rotatee');
-if(nav.classList.contains('nav-active')){
-   
+
 window.addEventListener('scroll',()=>{
+  if(nav.classList.contains('nav-active')){
+
    window.scrollTo(0,0);
+  }
 })
-}
+
     });
    
 }
    navSlide();
+
+
    window.addEventListener('scroll',()=>{
 var mynav=document.getElementById('mynav');
 var listt=document.getElementById('listt');
@@ -38,7 +42,7 @@ var listt=document.getElementById('listt');
     }
     if (scrolled<=150 && width<769){
         mynav.classList.remove('newnav');
-        listt.style.background="rgba(0,0,0,0.4)";
+        listt.style.background="rgba(0,0,0,0.8)";
      }
      if (scrolled>=90 && width>769){
         mynav.classList.add('newnav');
