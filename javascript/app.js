@@ -37,9 +37,7 @@ var svgg=document.getElementById('layer');
     if (scrolled>=50 && width<769){
        mynav.classList.add('newnav');
     listt.style.background="rgba(0,0,0,0.8)";
-    svgg.style.opacity="1";
-     svgg.style.fontSize="2.6rem";
-     svgg.style.opacity="0.6"
+   
     }
     if (scrolled<=120 && width<769){
         mynav.classList.remove('newnav');
@@ -69,6 +67,12 @@ svgg.style.opacity="1";
         
           
       }
+      if (scrolled>=10 && width<769){
+   
+     svgg.style.opacity="1";
+      svgg.style.fontSize="2.6rem";
+      svgg.style.opacity="0.6"
+     }
    });
 
 
